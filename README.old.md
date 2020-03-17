@@ -1,2 +1,0 @@
-# movies-rawan
-Movies App
