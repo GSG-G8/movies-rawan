@@ -20,7 +20,7 @@ class App extends Component {
           </h3>
         </header>
         <SearchForm class="search-form" SearchMovie={this.setSearchValue} />
-        <ShowMovie />
+        <ShowMovie value={this.state.searchValue} />
       </div>
     );
   }

@@ -8,9 +8,13 @@ class ShowMovie extends React.Component {
   };
 
   componentDidMount() {
-    fetch(
-      'https://api.themoviedb.org/3/trending/movie/day?api_key=7cdf7d7de96673cdc912e661988a1435'
-    )
+    let url;
+    if (!this.props.value)
+      url =
+        'https://api.themoviedb.org/3/trending/movie/day?api_key=7cdf7d7de96673cdc912e661988a1435';
+    else
+      url = `https://api.themoviedb.org/3/search/movie?api_key=7cdf7d7de96673cdc912e661988a1435&language=en-US&query=${this.props.value}&page=1&include_adult=false`;
+    fetch(url)
       .then(res => res.json())
       .then(
         result => {
@@ -26,6 +30,33 @@ class ShowMovie extends React.Component {
           });
         }
       );
+  }
+
+  componentDidUpdate(prevProp) {
+    if (this.state.props !== prevProp.value) {
+      let url;
+      if (!this.props.value)
+        url =
+          'https://api.themoviedb.org/3/trending/movie/day?api_key=7cdf7d7de96673cdc912e661988a1435';
+      else
+        url = `https://api.themoviedb.org/3/search/movie?api_key=7cdf7d7de96673cdc912e661988a1435&language=en-US&query=${this.props.value}&page=1&include_adult=false`;
+      fetch(url)
+        .then(res => res.json())
+        .then(
+          result => {
+            this.setState({
+              isLoaded: true,
+              items: result,
+            });
+          },
+          error => {
+            this.setState({
+              isLoaded: true,
+              error,
+            });
+          }
+        );
+    }
   }
 
   render() {
