@@ -75,10 +75,12 @@ class ShowMovie extends React.Component {
               src={`https://image.tmdb.org/t/p/w500/${item.poster_path}`}
               alt=""
             />
-            {item.title} {item.original_language}
-            {item.overview}
-            {item.release_date}
-            {item.media_type}
+            <p>
+              {item.title} {item.original_language}
+              {item.overview}
+              {item.release_date}
+              {item.media_type}
+            </p>
           </li>
         ))}
       </ul>

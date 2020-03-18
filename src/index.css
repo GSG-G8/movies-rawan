@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
 }
 
 code {
@@ -14,25 +15,67 @@ code {
 
 
 
-body {
-  background-color: #eee;
+ul {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+li{
+  list-style-type: none;
+  width: 400px;
+  height: 643px;
+  overflow: hidden;
+  margin-bottom: 3%;
+  box-shadow: 1px 1px 17px 0px #222222;
 }
 
-#root{
+img {
   width: 100%;
-  max-width: 768px;
+  height: 70%;
+}
+
+p {
+  line-height: 25px;
+  font-size: 18px;
+  height: 20%;
+  overflow: auto;
+  padding: 3px 24px;
+
 }
 
 .h1-app{
   text-align: center;
+  font-size: 80px;
+  font-family: 'Liu Jian Mao Cao', cursive;
+}
+
+.h3-app{
+  text-align: center;
+  font-size: 27px;
 }
 
 .search-form{
   justify-content: center;
   align-items: center;
+}
+
+.input-movie{
+  border: 1px solid black;
+  border-radius: 102px;
+  width: 395px;
+  height: 55px;
+}
+
+.submit-movie{
+  width: 138px;
+    margin-left: 10px;
+    height: 49px;
+    border: 1px solid black;
+    border-radius: 27px;
+}
+
+.form-div{
+  margin: 0 auto;
+  width: 569px;
 }

@@ -15,7 +15,7 @@ class App extends Component {
       <div>
         <header>
           <h1 className="h1-app">Movie App</h1>
-          <h3 className="h1-app">
+          <h3 className="h3-app">
             The Place Where You Can Find All Your Favourite Movies
           </h3>
         </header>
