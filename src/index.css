@@ -31,3 +31,8 @@ body {
 .h1-app{
   text-align: center;
 }
+
+.search-form{
+  justify-content: center;
+  align-items: center;
+}
