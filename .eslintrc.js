@@ -20,6 +20,8 @@ module.exports = {
   },
   'rules': {
     //  allow .js extensions for JSX.
+    "arrow-body-style": ["error", "as-needed"],
+    "react/state-in-constructor": 0,
     'react/jsx-filename-extension': [
       1,
       {
